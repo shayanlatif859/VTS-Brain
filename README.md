@@ -71,7 +71,7 @@ $$
 x_{norm}=\frac{x-x_{min}}{x_{max}-x_{min}}
 $$
 
-This normalized value may be displayed and, then received by the bridge, which will stream to VTS and using a JSON file mapping these float values to rules, will interpet the rules accordingly.
+This normalized value is displayed and received by the bridge for each sensor, which streams the data to VTS. Using a JSON file mapping these float values to rules, the bridge module interprets the rules accordingly.
 
 ## Installation and usage
 Type this into the terminal for all the libraries. Ensure pip is installed.
