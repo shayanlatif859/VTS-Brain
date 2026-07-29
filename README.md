@@ -100,10 +100,15 @@ It will open the GUI for the project. To use this:
 
 Unless you have a good understanding of EEG mappings for cognitive states, it is recommeneded to just edit the "outputs" section of the JSON file.
 Create hotkeys/expressions in VTS to match the appearance for the following default rules. Not all of them are needed; just use the ones you want. 
+
 ~ Stress
+
 ~ Focus
+
 ~ Arousal
+
 ~ Laughter (This one is kinda useless...)
+
 ~ Tiredness
 
 Ensure your device is powered on and connected to Bluetooth during usage. It should automatically detect a connected device on Linux and Windows, not MacOS.  
