@@ -98,7 +98,7 @@ It will open the GUI for the project. To use this:
 
 ~ Click on the run data stream menu in the bottom right corner to either run a real MUSE device input, a synthetic 16-channel input, or a .csv recording of a MUSE device
 
-Unless you have a good understanding of EEG mappings for cognitive states, it is recommeneded to just edit the "outputs" section of the JSON file.
+Unless you have a good understanding of EEG mappings for cognitive states, it is best to just edit the "outputs" section of the JSON file.
 Create hotkeys/expressions in VTS to match the appearance for the following default rules. Not all of them are needed; just use the ones you want. 
 
 ~ Stress
