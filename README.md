@@ -76,7 +76,7 @@ This normalized value may be displayed and, then received by the bridge, which w
 ## Installation and usage
 Type this into the terminal for all the libraries. Ensure pip is installed.
 ```bash
-pip install numpy scipy python-osc pylsl websocket-client brainflow
+pip install numpy scipy python-osc pylsl websocket-client brainflow pyside6
 ```
 Then download the VTS application, enable API settings, go to the directory for the VTS EEG script + modules, and run main.py in the terminal.
 ```bash
@@ -98,6 +98,15 @@ It will open the GUI for the project. To use this:
 
 ~ Click on the run data stream menu in the bottom right corner to either run a real MUSE device input, a synthetic 16-channel input, or a .csv recording of a MUSE device
 
+Unless you have a good understanding of EEG mappings for cognitive states, it is recommeneded to just edit the "outputs" section of the JSON file.
+Create hotkeys/expressions in VTS to match the appearance for the following default rules. Not all of them are needed; just use the ones you want. 
+~ Stress
+~ Focus
+~ Arousal
+~ Laughter (This one is kinda useless...)
+~ Tiredness
+
+Ensure your device is powered on and connected to Bluetooth during usage. It should automatically detect a connected device on Linux and Windows, not MacOS.  
 
 ## Current Limitations
 
@@ -107,9 +116,9 @@ It will open the GUI for the project. To use this:
 - State interpretation is heuristic and rule-based
 - GUI configuration tools are still in development
 
+NOTE: MUSE does not work on MacOS!
 
-Note that this program is far from complete. We must add a proper GUI and a way to measure all electrodes and return each individually in a manner that does not cause data leaks. Allowing for each electrode to stream information
-rather than an average will let us get the frequency values in each part of the brain rather than as an average, allowing for more accurate measures of conditions.
+Note that this program is far from complete. Noise reduction and muscle twitches management are not confirmed to be working perfectly.
 Consider reading into the effect of EEG states on the brain:
 
 https://pmc.ncbi.nlm.nih.gov/articles/PMC8777059/ ~ Jiang L, Siriaraya P, Choi D, Kuwahara N. Emotion Recognition Using Electroencephalography Signals of Older People for Reminiscence Therapy. Front Physiol. 2022 Jan 7;12:823013. doi: 10.3389/fphys.2021.823013. PMID: 35069270; PMCID: PMC8777059.
@@ -134,6 +143,7 @@ https://pubmed.ncbi.nlm.nih.gov/29243266/ ~ Allen JJB, Keune PM, Schönenberg M,
 - Mapping of EEG states to conditions with relevant research
 - Temporal smoothing and hysteresis
 - Easier GUI to use
+- Adjusting for other EEG devices than MUSE S/MUSE 2
 
 ## Demonstration
 Below is a video demonstration of the "_average" scripts being ran with a synthetic 16-channel input, which uses oscillating signals. This is not an accurate brain signal, and is best used for testing the filtering part of the script. For demonstration purposes, the JSON files have been adjusted to be more sensitive, letting us see how the model may be configured to move based on parameters, hotkey inputs, and expressions that may be programmed with the model.

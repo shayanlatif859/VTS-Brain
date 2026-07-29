@@ -4,55 +4,81 @@
       "name": "Stress",
       "conditions": [
         {
-          "band": "beta",
-          "op": ">",
-          "value": 0.7
+          "band": "alpha",
+          "op": "<",
+          "value": 0.4
         },
         {
           "band": "alpha",
+          "op": "<",
+          "value": 0.35,
+          "sensor": "AF8"
+        },
+        {
+          "band": "beta",
+          "op": ">",
+          "value": 0.7
+        }
+      ],
+      "outputs": [
+        {
+          "type": "YourExpressionHere",
+          "expression": "YourExpressionHere.exp3.json"
+        }
+      ]
+    },
+    {
+      "name": "Focus",
+      "conditions": [
+        {
+          "band": "alpha",
+          "op": ">",
+          "value": 0.5
+        },
+        {
+          "band": "alpha",
+          "op": ">",
+          "value": 0.5,
+          "sensor": "AF8"
+        },
+        {
+          "band": "beta",
           "op": "<",
           "value": 0.4
         }
       ],
       "outputs": [
         {
-          "type": "parameter",
-          "param": "FaceAngleX",
-          "source": "beta",
-          "scale": 60
-        },
-        {
-          "type": "expression",
-          "expression": "Fear.exp3.json",
-          "active": true
+          "type": "YourExpressionHere",
+          "expression": "YourExpressionHere.exp3.json"
         }
       ]
     },
     {
-      "name": "Calm",
+      "name": "Laugh",
       "conditions": [
         {
-          "band": "alpha",
+          "band": "gamma",
           "op": ">",
-          "value": 0.2
+          "value": 0.65
+        },
+        {
+          "band": "alpha",
+          "sensor": "AF8",
+          "op": ">",
+          "value": 0.4
+        },
+        {
+          "band": "alpha",
+          "sensor": "AF7",
+          "op": "<",
+          "value": 0.4
         }
       ],
       "outputs": [
         {
-          "type": "parameter",
-          "param": "EyeOpenLeft",
-          "source": "alpha",
-          "scale": 1.0
-        },
-        {
-          "type": "parameter",
-          "param": "EyeOpenRight",
-          "source": "alpha",
-          "scale": 1.0
-        },
-        {
-          "type": "hotkey",
-          "hotkey_id": "db42ae9ebdfa4a80a7f5f2f49364079b"
+          "type": "YourExpressionHere",
+          "Expression": "YourExpressionHere.exp3.json"
         }
       ]
     }
