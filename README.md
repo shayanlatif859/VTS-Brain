@@ -1,4 +1,4 @@
-# VTube-Studio-EEG-Input
+# VTS Brain
 
 A real-time EEG → VTube Studio interface using Muse headbands, BrainFlow, OSC, and spectral band analysis.
 
