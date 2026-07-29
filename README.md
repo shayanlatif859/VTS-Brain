@@ -82,7 +82,10 @@ Then download the VTS application, enable API settings, go to the directory for 
 ```bash
 python main.py
 ```
-It will open the GUI for the project. To use this:
+It will open the GUI for the project.
+<img width="1100" height="823" alt="Screenshot 2026-07-06 at 11 11 43 PM" src="https://github.com/user-attachments/assets/cbc48ebf-e006-4f1e-9dc4-585a5f6a0dfd" />
+
+To use this:
 
 ~ Load a JSON file in the header (Just pressing load will load the JSON file that came with the program, you do not need to make your own JSON file)
 
@@ -111,6 +114,8 @@ Create hotkeys/expressions in VTS to match the appearance for the following defa
 
 ~ Tiredness
 
+~ Fear
+
 Ensure your device is powered on and connected to Bluetooth during usage. It should automatically detect a connected device on Linux and Windows, not MacOS.  
 
 ## Current Limitations
@@ -120,10 +125,8 @@ Ensure your device is powered on and connected to Bluetooth during usage. It sho
 - Consumer EEG devices are noisy and low-channel-count
 - State interpretation is heuristic and rule-based
 - GUI configuration tools are still in development
+- <u>MUSE does connect very well on MacOS!</u>
 
-NOTE: MUSE does not work on MacOS!
-
-Note that this program is far from complete. Noise reduction and muscle twitches management are not confirmed to be working perfectly.
 Consider reading into the effect of EEG states on the brain:
 
 https://pmc.ncbi.nlm.nih.gov/articles/PMC8777059/ ~ Jiang L, Siriaraya P, Choi D, Kuwahara N. Emotion Recognition Using Electroencephalography Signals of Older People for Reminiscence Therapy. Front Physiol. 2022 Jan 7;12:823013. doi: 10.3389/fphys.2021.823013. PMID: 35069270; PMCID: PMC8777059.
@@ -138,23 +141,21 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC11378327/ ~ Cherenfant M, Chandanathil 
 
 https://pubmed.ncbi.nlm.nih.gov/29243266/ ~ Allen JJB, Keune PM, Schönenberg M, Nusslock R. Frontal EEG alpha asymmetry and emotion: From neural underpinnings and methodological considerations to psychopathology and social cognition. Psychophysiology. 2018 Jan;55(1). doi: 10.1111/psyp.13028. PMID: 29243266.
 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4141236/ ~ Stujenske JM, Likhtik E, Topiwala MA, Gordon JA. Fear and safety engage competing patterns of theta-gamma coupling in the basolateral amygdala. Neuron. 2014 Aug 20;83(4):919-33. doi: 10.1016/j.neuron.2014.07.026. PMID: 25144877; PMCID: PMC4141236.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9665934/ ~ Snipes S, Krugliakova E, Meier E, Huber R. The Theta Paradox: 4-8 Hz EEG Oscillations Reflect Both Sleep Pressure and Cognitive Control. J Neurosci. 2022 Nov 9;42(45):8569-8586. doi: 10.1523/JNEUROSCI.1063-22.2022. Epub 2022 Oct 6. PMID: 36202618; PMCID: PMC9665934.
+
 ## Future Work
 
-- Per-electrode spectral outputs
-- Frontal asymmetry analysis
+- Analysis of rate of signal power (e.g. for fear, the rate of theta is supposed to spike)
 - Relative band power metrics
-- Artifact rejection and blink filtering
-- PyQt configuration interface
-- Mapping of EEG states to conditions with relevant research
+- Stronger artifact rejection and blink filtering
+- Accurate (enough) mapping of EEG states to conditions with relevant research
 - Temporal smoothing and hysteresis
 - Easier GUI to use
 - Adjusting for other EEG devices than MUSE S/MUSE 2
 
 ## Demonstration
-Below is a video demonstration of the "_average" scripts being ran with a synthetic 16-channel input, which uses oscillating signals. This is not an accurate brain signal, and is best used for testing the filtering part of the script. For demonstration purposes, the JSON files have been adjusted to be more sensitive, letting us see how the model may be configured to move based on parameters, hotkey inputs, and expressions that may be programmed with the model.
+Below is a video demonstration of the scripts, configured to take average activity of the brain instead of per sensor, being ran with a synthetic 16-channel input, which uses oscillating signals. This is not an accurate brain signal, and is best used for testing the filtering part of the script. For demonstration purposes, the JSON files have been adjusted to be more sensitive, letting us see how the model may be configured to move based on parameters, hotkey inputs, and expressions that may be programmed with the model.
 
 https://github.com/user-attachments/assets/031c560f-9e0e-423c-8ac9-5be87f100114
-
-Note: This demonstration was done using the older code. If you want to try this code in its current form, run main.py to run the GUI.
-
-<img width="1100" height="823" alt="Screenshot 2026-07-06 at 11 11 43 PM" src="https://github.com/user-attachments/assets/cbc48ebf-e006-4f1e-9dc4-585a5f6a0dfd" />
