@@ -102,19 +102,15 @@ To use this:
 ~ Click on the run data stream menu in the bottom right corner to either run a real MUSE device input, a synthetic 16-channel input, or a .csv recording of a MUSE device
 
 Unless you have a good understanding of EEG mappings for cognitive states, it is best to just edit the "outputs" section of the JSON file.
-Create hotkeys/expressions in VTS to match the appearance for the following default rules. Not all of them are needed; just use the ones you want. 
+Create hotkeys/expressions in VTS to match the appearance for the following default rules. Not all of them are needed; just use the ones you want. You may also have the EEG signal affect the parameters for the model, as it allows the parameter float value to scale with brain signal power, but this is hard to use and works best with the creation of a custom parameter.
 
-~ Stress
+~ Stress (Also measures fear)
 
 ~ Focus
 
-~ Arousal
-
 ~ Laughter (This one is kinda useless...)
 
-~ Tiredness
-
-~ Fear
+~ Tiredness/Fatigue
 
 Ensure your device is powered on and connected to Bluetooth during usage. It should automatically detect a connected device on Linux and Windows, not MacOS.  
 
