@@ -83,7 +83,7 @@ Then download the VTS application, enable API settings, go to the directory for 
 python main.py
 ```
 It will open the GUI for the project.
-<img width="1100" height="823" alt="Screenshot 2026-07-06 at 11 11 43 PM" src="https://github.com/user-attachments/assets/cbc48ebf-e006-4f1e-9dc4-585a5f6a0dfd" />
+<img width="1096" height="824" alt="gui" src="https://github.com/user-attachments/assets/3d94ad04-be73-410e-b443-90d16d0aa761" />
 
 To use this:
 
